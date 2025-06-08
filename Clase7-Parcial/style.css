@@ -1,0 +1,96 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: white;
+    color: #333;
+  }
+  
+  .barratop {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    background-color: skyblue;
+    font-style: italic;
+    border-bottom: 2px solid skyblue;
+  }
+  
+  .secciontitulo {
+    text-align: center;
+    background-color: white;
+    padding: 20px 10px;
+    border-bottom: 5px solid #fff8e1;
+  }
+  
+  .tituloprincipal {
+    font-size: 3em;
+    color: #333;
+    margin: 0;
+  }
+  
+  .titulosecundario {
+    font-style: italic;
+    color: #555;
+  }
+  .titnoticia {
+    font-style:arial;
+    color: lightblue;
+  }
+  .noticia {
+    background-color: white(32, 114, 141);
+    margin: 10px 0 5px;
+    color:black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .noticia4 {
+    background-color: rgb(32, 114, 141);
+    margin: 10px 0 5px;
+    color:white;
+  }
+  .titnoticia4
+  .content {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+  }
+  .imagen{
+    align-items:center;
+    display: flex;
+    padding: 20px;
+  }
+
+  .titnoticia1 {
+    background-color: white;
+    margin: 10px 0 5px;
+    color:rgb(red, green, blue);
+  }
+
+    .piepagina{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        font-size: 0.9em;
+        background-color: white;
+        font-style: italic;
+        border-bottom: 2px solid white;
+        color:black
+      
+  }
+
+
+
+  
+
+
+
+  
+
+  
+
+
+  

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Boletín</title>
+</head>
+<body>
+
+  <header class="barratop">
+    <span>Boletín Argentino</span>
+    <span>19/05/2025</span>
+  </header>
+
+  <section class="secciontitulo">
+    <h1 class="tituloprincipal">Boletín <strong>Argentino</strong></h1>
+    <p class="titulosecundario">El mejor diario del país</p>
+  </section>
+
+  <div class="imagenprincipal">
+    <img src="../Clase7-Parcial/img/ciudad.png" alt="Imagen de ciudad">
+  </div>
+
+  <section class="noticias">
+    <div class="noticia">
+      <h4 class="subtit">TÍTULO 1</h4>
+      <h3 class="titnoticia">Antonio Mohamed, el DT que siempre tiene una sonrisa a mano y a Boca como una (gran) cuenta pendiente</h3>
+      <p>Apenas minutos después de conectarse vía Zoom con Nicolás Burdisso...</p>
+    </div>
+    <div class="noticia">
+      <h4 class="subtit">TÍTULO 2</h4>
+      <h3 class="titnoticia">Franco Colapinto y Yuki Tsunoda: los comunicados de Alpine y la Fórmula 1 sobre el comportamiento de los fans</h3>
+      <p>La jornada posterior al Gran Premio de Emilia-Romagna...</p>
+    </div>
+    <div class="noticia">
+      <h4 class="subtit">TÍTULO 3</h4>
+      <h3 class="titnoticia">¿Quién es el heredero? La asunción de León XIV reunió a cuatro pretendientes al trono...</h3>
+      <p>El funeral de Francisco y la asunción de León XIV...</p>
+    </div>
+  </section>
+
+  <section class="noticia-destacada">
+    <img src="../Clase7-Parcial/img/noticia4.png" alt="Imagen Noticia 4">
+    <div class="textodestacado">
+      <h2>El Gobierno acelera las conversaciones para sumar aliados de Pro y la UCR</h2>
+      <p>El funeral de Francisco y la asunción de León XIV...</p>
+    </div>
+  </section>
+
+  <section class="formulario-container">
+    <h2 id="saludo">HOLA</h2>
+    <form id="formulario" novalidate>
+      <div class="form-col">
+        <label>Nombre completo</label>
+        <input type="text" id="nombre" />
+        <small class="error"></small>
+
+        <label>Email</label>
+        <input type="email" id="email" />
+        <small class="error"></small>
+
+        <label>Contraseña</label>
+        <input type="password" id="password" />
+        <small class="error"></small>
+
+        <label>Repetir contraseña</label>
+        <input type="password" id="password2" />
+        <small class="error"></small>
+
+        <label>Edad</label>
+        <input type="number" id="edad" />
+        <small class="error"></small>
+      </div>
+
+      <div class="form-col">
+        <label>Teléfono</label>
+        <input type="text" id="telefono" />
+        <small class="error"></small>
+
+        <label>Dirección</label>
+        <input type="text" id="direccion" />
+        <small class="error"></small>
+
+        <label>Ciudad</label>
+        <input type="text" id="ciudad" />
+        <small class="error"></small>
+
+        <label>Código Postal</label>
+        <input type="text" id="cp" />
+        <small class="error"></small>
+
+        <label>DNI</label>
+        <input type="text" id="dni" />
+        <small class="error"></small>
+      </div>
+
+      <div class="form-boton">
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </section>
+
+
+  <footer class="piepagina">
+    <span>Título 3</span>
+    <span>1</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
