@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Distancia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Distancia entre dos puntos</h1>
+
+  <div class="form-group">
+    <label>Dimensiones:</label>
+    <select id="dimension" onchange="cambiarDimension()">
+      <option value="2">2 dimensiones</option>
+      <option value="3">3 dimensiones</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Coordenadas del punto A:</label>
+    <input type="number" id="xa" placeholder="Xa">
+    <input type="number" id="ya" placeholder="Ya">
+    <input type="number" id="za" placeholder="Za (solo 3D)" class="coord-3d hidden">
+  </div>
+
+  <div class="form-group">
+    <label>Coordenadas del punto B:</label>
+    <input type="number" id="xb" placeholder="Xb">
+    <input type="number" id="yb" placeholder="Yb">
+    <input type="number" id="zb" placeholder="Zb (solo 3D)" class="coord-3d hidden">
+  </div>
+
+  <button onclick="calcularDistancia()">Calcular longitud del segmento AB</button>
+
+  <div id="resultado"></div>
+
+  <script src="Script.js"></script>
+</body>
+</html>
