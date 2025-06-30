@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Caudal</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Caudal - Parcual 2</h1>
+
+        <label for="tipo">Seleccione el tipo de cálculo:</label>
+        <select id="tipo" onchange="mostrarFormulario()">
+            <option value="">Seleccione una opción</option>
+            <option value="rectangular">Tubería Rectangular</option>
+            <option value="circular">Tubería Circular</option>
+            <option value="seccion">Sección de Tuberia</option>
+        </select>
+
+        <form id="formulario">
+            <div id="input-circular" class="formulario-oculto">
+                <input type="number" id="diametro" placeholder="Ingrese valor Diametro" min="0" step="any" />
+                <input type="number" id="velocidad-circular" placeholder="Ingrese valor Velocidad" min="0" step="any" />
+            </div>
+
+            <div id="input-rectangular" class="formulario-oculto">
+                <input type="number" id="ladoA"  placeholder="ingrese un valor para Lado A" min="0" step="any" />
+                <input type="number" id="ladoB" placeholder="ingrese un valor para Lado B " min="0" step="any" />
+                <input type="number" id="velocidad-rectangular" placeholder="ingrese un valor para Velocidad" min="0" step="any" />
+            </div>
+
+            <div id="input-seccion" class="formulario-oculto">
+                <input type="number" id="seccion" placeholder="Ingrese un valor para Sección" min="0" step="any" />
+                <input type="number" id="velocidad-seccion" placeholder="Ingrese un valor para Velocidad" min="0" step="any" />
+            </div>
+
+            <div class="botones">
+                <button type="button" onclick="calcularCaudal()">Calcular</button>
+                <button type="reset" onclick="limpiarTodo()">Limpiar</button>
+            </div>
+
+            <p id="resultado"></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

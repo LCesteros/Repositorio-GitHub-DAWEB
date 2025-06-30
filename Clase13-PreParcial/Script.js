@@ -1,54 +1,54 @@
-function cambiarDimension() {
-  const dimension = document.getElementById('dimension').value;
-  const coord3D = document.querySelectorAll('.coord-3d');
+function mostrar() {
+    document.getElementById("circular").style.display = "none";
+    document.getElementById("rectangular").style.display = "none";
+    document.getElementById("seccion").style.display = "none";
 
-  coord3D.forEach(input => {
-    input.classList.toggle('hidden', dimension === "2");
-  });
-
-  document.getElementById('resultado').innerText = "";
+    const tipo = document.getElementById("tipo").value;
+    if (tipo) {
+        document.getElementById(tipo).style.display = "block";
+    }
 }
 
-function validarNumero(valor) {
-  return !isNaN(valor) && valor > 0;
-}
+function calcular() {
+    const tipo = document.getElementById("tipo").value;
+    let resultado = "";
 
-function calcularDistancia() {
-  const dimension = document.getElementById('dimension').value;
+    if (tipo === "circular") {
+        const d = parseFloat(document.getElementById("diametro").value);
+        const v = parseFloat(document.getElementById("velocidad1").value);
+        if (d > 0 && v > 0) {
+            const area = Math.PI * (d / 2) ** 2;
+            resultado = "Caudal: " + (area * v).toFixed(3) + " m³/s";
+        } else {
+            resultado = "Ingrese valores válidos.";
+        }
 
-  const xa = parseFloat(document.getElementById('xa').value);
-  const ya = parseFloat(document.getElementById('ya').value);
-  const xb = parseFloat(document.getElementById('xb').value);
-  const yb = parseFloat(document.getElementById('yb').value);
+    } else if (tipo === "rectangular") {
+        const a = parseFloat(document.getElementById("ladoA").value);
+        const b = parseFloat(document.getElementById("ladoB").value);
+        const v = parseFloat(document.getElementById("velocidad2").value);
+        if (a > 0 && b > 0 && v > 0) {
+            resultado = "Caudal: " + (a * b * v).toFixed(3) + " m³/s";
+        } else {
+            resultado = "Ingrese valores válidos.";
+        }
 
-  let mensaje = "";
-
-  if (![xa, ya, xb, yb].every(validarNumero)) {
-    mensaje = "Todos los valores deben ser mayores a cero y numéricos.";
-    document.getElementById('resultado').innerHTML = `<span class="error">${mensaje}</span>`;
-    return;
-  }
-
-  let distancia = 0;
-
-  if (dimension === "2") {
-    distancia = Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
-  } else {
-    const za = parseFloat(document.getElementById('za').value);
-    const zb = parseFloat(document.getElementById('zb').value);
-
-    if (![za, zb].every(validarNumero)) {
-      mensaje = "Todos los valores deben ser mayores a cero y numéricos.";
-      document.getElementById('resultado').innerHTML = `<span class="error">${mensaje}</span>`;
-      return;
+    } else if (tipo === "seccion") {
+        const s = parseFloat(document.getElementById("area").value);
+        const v = parseFloat(document.getElementById("velocidad3").value);
+        if (s > 0 && v > 0) {
+            resultado = "Caudal: " + (s * v).toFixed(3) + " m³/s";
+        } else {
+            resultado = "Ingrese valores válidos.";
+        }
     }
 
-    distancia = Math.sqrt(
-      Math.pow(xb - xa, 2) + 
-      Math.pow(yb - ya, 2) + 
-      Math.pow(zb - za, 2)
-    );
-  }
+    document.getElementById("resultado").textContent = resultado;
+}
 
-  document.getElementById('resultado').innerHTML = `La distancia entre A y B es: <strong>${distancia.toFixed(4)}</strong>`;
+function limpiar() {
+    document.getElementById("tipo").value = "";
+    mostrar();
+    document.querySelectorAll("input").forEach(i => i.value = "");
+    document.getElementById("resultado").textContent = "";
 }
